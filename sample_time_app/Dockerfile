@@ -5,8 +5,8 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 
-RUN groupadd -g 799 nyu && \
-    useradd -r -u 999 -g nyu nyu
+RUN groupadd -g 799 sj21 && \
+    useradd -r -u 999 -g sj21 sj21
 
 # Set up a working folder and install the pre-reqs
 WORKDIR /app
@@ -15,6 +15,6 @@ RUN pip install Flask
 
 USER nyu
 
-COPY --chown=nyu:nyu . .
+COPY --chown=sj21:sj21 . .
 
 CMD [ "python", "./run.py" ]
