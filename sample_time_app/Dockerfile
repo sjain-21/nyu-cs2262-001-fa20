@@ -13,7 +13,7 @@ WORKDIR /app
 
 RUN pip install Flask
 
-USER nyu
+USER sj21
 
 COPY --chown=sj21:sj21 . .
 
